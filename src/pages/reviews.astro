@@ -1,0 +1,398 @@
+---
+
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="generator" content={Astro.generator} />
+		<meta
+			name="description"
+			content="Share your review and experience working with Amigos House Buyer."
+		/>
+		<title>Reviews | Amigos House Buyer</title>
+	</head>
+	<body>
+		<header class="site-header" aria-label="Site header">
+			<div class="top-bar">
+				<p>Preocupado por proteger su credito? Llamenos, nosotros podemos ayudarle.</p>
+				<a href="tel:18636603118" aria-label="Call Amigos House Buyer at 863 660 3118">
+					863 660 3118
+				</a>
+			</div>
+
+			<nav class="nav" aria-label="Primary navigation">
+				<a class="brand" href="/" aria-label="Amigos House Buyer home">
+					<img class="brand-logo" src="/logo.png" alt="Amigos House Buyer logo" />
+				</a>
+				<div class="nav-links">
+					<a href="/#process">Sell Your House</a>
+					<a href="/reviews/" aria-current="page">Reviews</a>
+					<a href="/faq/">FAQ</a>
+					<a href="tel:18636603118" class="nav-call">Call Now</a>
+				</div>
+			</nav>
+		</header>
+
+		<main>
+			<section class="reviews-hero">
+				<div class="reviews-hero-inner">
+					<p class="eyebrow">Customer reviews</p>
+					<h1>Share your experience with Amigos House Buyer.</h1>
+					<p>
+						Want to share your own experience with us? Send us a note to let us know what
+						working with Amigos House Buyer LLC. has been like for you.
+					</p>
+				</div>
+			</section>
+
+			<section class="review-section" aria-label="Submit a review">
+				<div class="review-copy">
+					<p class="section-kicker">Leave a review</p>
+					<h2>We would love to hear from you.</h2>
+				
+				</div>
+
+				<form class="review-form" aria-label="Review submission form">
+					<div class="field-grid">
+						<label>
+							<span>Name</span>
+							<input type="text" name="name" autocomplete="name" placeholder="Your name" />
+						</label>
+						<label>
+							<span>Email</span>
+							<input type="email" name="email" autocomplete="email" placeholder="you@example.com" />
+						</label>
+					</div>
+
+					<label>
+						<span>Rating</span>
+						<select name="rating">
+							<option value="">Choose a rating</option>
+							<option value="5">5 stars</option>
+							<option value="4">4 stars</option>
+							<option value="3">3 stars</option>
+							<option value="2">2 stars</option>
+							<option value="1">1 star</option>
+						</select>
+					</label>
+
+					<label>
+						<span>Your review</span>
+						<textarea
+							name="review"
+							rows="7"
+							placeholder="Tell us what working with Amigos House Buyer was like for you."></textarea>
+					</label>
+
+					<button type="submit">Submit Review</button>
+					<p class="form-note">Thank you for taking the time to share your experience.</p>
+				</form>
+			</section>
+		</main>
+	</body>
+</html>
+
+<style>
+	:root {
+		color-scheme: light;
+		font-family:
+			Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+		--ink: #162317;
+		--muted: #5d6570;
+		--cream: #fff8ef;
+		--orange: #fd8b17;
+		--blue: #1164b0;
+		--blue-dark: #083d72;
+		--blue-soft: #e9f3ff;
+		--white: #ffffff;
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+
+	body {
+		margin: 0;
+		background: var(--cream);
+		color: var(--ink);
+	}
+
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	.site-header {
+		position: absolute;
+		inset: 0 0 auto;
+		z-index: 5;
+	}
+
+	.top-bar {
+		display: flex;
+		justify-content: center;
+		gap: 18px;
+		padding: 10px clamp(16px, 4vw, 48px);
+		background: rgba(8, 61, 114, 0.97);
+		color: var(--white);
+		font-size: 0.9rem;
+		font-weight: 700;
+		text-align: center;
+	}
+
+	.top-bar p {
+		margin: 0;
+	}
+
+	.top-bar a {
+		color: var(--orange);
+		white-space: nowrap;
+	}
+
+	.nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 24px;
+		width: min(1180px, calc(100% - 32px));
+		margin: 18px auto 0;
+		padding: 14px 18px;
+		border: 1px solid rgba(255, 255, 255, 0.35);
+		border-radius: 8px;
+		background: rgba(255, 255, 255, 0.92);
+		box-shadow: 0 18px 50px rgba(8, 61, 114, 0.16);
+		backdrop-filter: blur(12px);
+	}
+
+	.brand {
+		display: inline-flex;
+		align-items: center;
+		min-width: 150px;
+	}
+
+	.brand-logo {
+		width: min(190px, 38vw);
+		height: 56px;
+		border-radius: 6px;
+		object-fit: contain;
+		object-position: left center;
+		background: var(--blue-soft);
+	}
+
+	.nav-links {
+		display: flex;
+		align-items: center;
+		gap: clamp(14px, 2.4vw, 28px);
+		color: var(--blue-dark);
+		font-size: 0.92rem;
+		font-weight: 800;
+	}
+
+	.nav-links [aria-current="page"] {
+		color: var(--orange);
+	}
+
+	.nav-call {
+		padding: 10px 14px;
+		border-radius: 6px;
+		background: var(--orange);
+		color: var(--white);
+	}
+
+	.reviews-hero {
+		padding: 185px clamp(18px, 6vw, 86px) 78px;
+		background:
+			linear-gradient(90deg, rgba(8, 61, 114, 0.94), rgba(17, 100, 176, 0.78)),
+			url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=2000&q=82")
+				center / cover;
+		color: var(--white);
+	}
+
+	.reviews-hero-inner {
+		max-width: 900px;
+	}
+
+	.eyebrow,
+	.section-kicker {
+		color: var(--orange);
+		font-size: 0.78rem;
+		font-weight: 900;
+		text-transform: uppercase;
+	}
+
+	.eyebrow {
+		display: inline-flex;
+		margin: 0 0 18px;
+		padding: 8px 12px;
+		border-left: 4px solid var(--orange);
+		background: rgba(255, 255, 255, 0.12);
+		color: #ffe4ca;
+	}
+
+	h1 {
+		max-width: 880px;
+		margin: 0;
+		font-size: clamp(2.6rem, 6vw, 5.2rem);
+		line-height: 0.98;
+		letter-spacing: 0;
+	}
+
+	.reviews-hero p:last-child {
+		max-width: 680px;
+		margin: 24px 0 0;
+		color: rgba(255, 255, 255, 0.86);
+		font-size: 1.12rem;
+		line-height: 1.65;
+	}
+
+	.review-section {
+		display: grid;
+		grid-template-columns: minmax(0, 0.8fr) minmax(320px, 560px);
+		gap: clamp(26px, 6vw, 76px);
+		align-items: start;
+		padding: clamp(54px, 7vw, 92px) clamp(18px, 6vw, 86px);
+	}
+
+	.review-copy {
+		display: grid;
+		gap: 16px;
+		max-width: 520px;
+	}
+
+	.review-copy h2,
+	.review-copy p {
+		margin: 0;
+	}
+
+	.review-copy h2 {
+		font-size: clamp(2rem, 4.5vw, 4rem);
+		line-height: 1;
+		letter-spacing: 0;
+	}
+
+	.review-copy p:not(.section-kicker) {
+		color: var(--muted);
+		font-size: 1.06rem;
+		line-height: 1.7;
+	}
+
+	.review-form {
+		display: grid;
+		gap: 16px;
+		padding: 26px;
+		border: 1px solid #cfe2f5;
+		border-radius: 8px;
+		background: var(--white);
+		box-shadow: 0 20px 60px rgba(8, 61, 114, 0.1);
+	}
+
+	.field-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 14px;
+	}
+
+	label {
+		display: grid;
+		gap: 7px;
+		color: var(--muted);
+		font-size: 0.82rem;
+		font-weight: 800;
+	}
+
+	input,
+	select,
+	textarea {
+		width: 100%;
+		border: 1px solid #d7ded8;
+		border-radius: 6px;
+		padding: 0 13px;
+		color: var(--ink);
+		font: inherit;
+		background: #fbfcfb;
+	}
+
+	input,
+	select {
+		min-height: 48px;
+	}
+
+	textarea {
+		min-height: 160px;
+		padding-block: 13px;
+		resize: vertical;
+	}
+
+	input:focus,
+	select:focus,
+	textarea:focus {
+		border-color: var(--blue);
+		box-shadow: 0 0 0 3px rgba(17, 100, 176, 0.14);
+		outline: none;
+	}
+
+	button {
+		min-height: 52px;
+		border: 0;
+		border-radius: 6px;
+		background: var(--blue);
+		color: var(--white);
+		cursor: pointer;
+		font: inherit;
+		font-weight: 900;
+	}
+
+	.form-note {
+		margin: 0;
+		color: var(--muted);
+		font-size: 0.9rem;
+		text-align: center;
+	}
+
+	@media (max-width: 920px) {
+		.nav {
+			align-items: flex-start;
+		}
+
+		.nav-links {
+			flex-wrap: wrap;
+			justify-content: flex-end;
+		}
+
+		.review-section {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	@media (max-width: 680px) {
+		.top-bar {
+			display: grid;
+			gap: 5px;
+			padding-block: 8px;
+		}
+
+		.nav {
+			margin-top: 10px;
+		}
+
+		.nav-links a:not(.nav-call) {
+			display: none;
+		}
+
+		.reviews-hero {
+			padding: 166px 16px 50px;
+		}
+
+		.field-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.review-form {
+			padding: 20px;
+		}
+	}
+</style>

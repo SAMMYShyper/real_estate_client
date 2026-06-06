@@ -1,0 +1,406 @@
+---
+
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="generator" content={Astro.generator} />
+		<meta
+			name="description"
+			content="Frequently asked questions about selling your house to Amigos House Buyer."
+		/>
+		<title>FAQ | Amigos House Buyer</title>
+	</head>
+	<body>
+		<header class="site-header" aria-label="Site header">
+			<div class="top-bar">
+				<p>Preocupado por proteger su credito? Llamenos, nosotros podemos ayudarle.</p>
+				<a href="tel:18636603118" aria-label="Call Amigos House Buyer at 863 660 3118">
+					863 660 3118
+				</a>
+			</div>
+
+			<nav class="nav" aria-label="Primary navigation">
+				<a class="brand" href="/" aria-label="Amigos House Buyer home">
+					<img class="brand-logo" src="/logo.png" alt="Amigos House Buyer logo" />
+				</a>
+				<div class="nav-links">
+					<a href="/#process">Sell Your House</a>
+					<a href="/reviews/">Reviews</a>
+					<a href="/faq/" aria-current="page">FAQ</a>
+					<a href="tel:18636603118" class="nav-call">Call Now</a>
+				</div>
+			</nav>
+		</header>
+
+		<main>
+			<section class="faq-hero">
+				<div class="faq-hero-inner">
+					<p class="eyebrow">Frequently asked questions</p>
+					<h1>Questions?</h1>
+					<p>Answered by our folks at Amigos House Buyer, LLC</p>
+				</div>
+			</section>
+
+			<section class="faq-section" aria-label="Frequently asked questions">
+				<div class="faq-list">
+					<!-- Duplicate a details block below for each question and answer. -->
+					<details>
+						<summary> Q:  Will you actually buy our house?</summary>
+						<p>
+							Yes, we will!  If the house meets our criteria we proceed and buy it. You can, sell your house <b>fast</b>, in Lakeland, Plant City, Davenport, and surrounding areas. We don’t use bank financing so you don’t have to worry about our ability to close on a deal. After purchasing we update the house put it back on the market or keep it in our portfolio.
+						</p>
+					</details>
+
+					<details>
+						<summary>Q:  How are you different from a real estate agent?</summary>
+						<p>
+							We don't charge any fees. When we agree on price and terms we don't have to qualify to a Financial Institution.
+						</p>
+					</details>
+
+					<details>
+						<summary>Q: How much you pay for my house?</summary>
+						<p>
+							The price we are willing to pay for a house depends on the condition of the house and the values of the comparable houses in the vicinity. Our no-obligation pricing commitment means that you don’t have to move forward with the offer we give you.
+							<br><br>Typically we offer two options: One cash option and the other option using financing.</br>
+						</p>
+					</details>
+
+					<details>
+						<summary>Q:  Are there any fees or commissions when working with AMIGOS HOUSE BUYER?</summary>
+						<p>
+							No fees or commissions when you sell directly to us, unlike listing fees that can take up to 6% from your pocket. We’ll make you an offer, and if it fits, we’ll buy your house commission-free. We often cover closing costs too! Once we buy, the burden is ours, and you walk away free from property responsibilities.
+						</p>
+					</details>
+
+					<details>
+						<summary>Q:  Is there any obligation when I submit my information?</summary>
+						<p>
+							There is absolutely zero obligation for you, we’ll run our numbers and let you know your options. From there, it’s 100% your decision on whether or not you’d like to sell your house to us. We’ll let you decide what’s right for you.
+						</p>
+					</details>
+				</div>
+
+				<aside class="faq-card" aria-label="Contact Amigos House Buyer">
+					<p class="section-kicker">Still have questions?</p>
+					<h2>Talk with us before you decide.</h2>
+					<p>
+						Call Amigos House Buyer and ask anything about the process, the offer, or your timeline.
+					</p>
+					<a class="button primary" href="tel:18636603118">Call 863 660 3118</a>
+				</aside>
+			</section>
+		</main>
+	</body>
+</html>
+
+<style>
+	:root {
+		color-scheme: light;
+		font-family:
+			Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+		--ink: #162317;
+		--muted: #5d6570;
+		--cream: #fff8ef;
+		--orange: #fd8b17;
+		--blue: #1164b0;
+		--blue-dark: #083d72;
+		--blue-soft: #e9f3ff;
+		--white: #ffffff;
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+
+	body {
+		margin: 0;
+		background: var(--cream);
+		color: var(--ink);
+	}
+
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	.site-header {
+		position: absolute;
+		inset: 0 0 auto;
+		z-index: 5;
+	}
+
+	.top-bar {
+		display: flex;
+		justify-content: center;
+		gap: 18px;
+		padding: 10px clamp(16px, 4vw, 48px);
+		background: rgba(8, 61, 114, 0.97);
+		color: var(--white);
+		font-size: 0.9rem;
+		font-weight: 700;
+		text-align: center;
+	}
+
+	.top-bar p {
+		margin: 0;
+	}
+
+	.top-bar a {
+		color: var(--orange);
+		white-space: nowrap;
+	}
+
+	.nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 24px;
+		width: min(1180px, calc(100% - 32px));
+		margin: 18px auto 0;
+		padding: 14px 18px;
+		border: 1px solid rgba(255, 255, 255, 0.35);
+		border-radius: 8px;
+		background: rgba(255, 255, 255, 0.92);
+		box-shadow: 0 18px 50px rgba(8, 61, 114, 0.16);
+		backdrop-filter: blur(12px);
+	}
+
+	.brand {
+		display: inline-flex;
+		align-items: center;
+		min-width: 150px;
+	}
+
+	.brand-logo {
+		width: min(190px, 38vw);
+		height: 56px;
+		border-radius: 6px;
+		object-fit: contain;
+		object-position: left center;
+		background: var(--blue-soft);
+	}
+
+	.nav-links {
+		display: flex;
+		align-items: center;
+		gap: clamp(14px, 2.4vw, 28px);
+		color: var(--blue-dark);
+		font-size: 0.92rem;
+		font-weight: 800;
+	}
+
+	.nav-links [aria-current="page"] {
+		color: var(--orange);
+	}
+
+	.nav-call {
+		padding: 10px 14px;
+		border-radius: 6px;
+		background: var(--orange);
+		color: var(--white);
+	}
+
+	.faq-hero {
+		padding: 185px clamp(18px, 6vw, 86px) 78px;
+		background:
+			linear-gradient(90deg, rgba(8, 61, 114, 0.94), rgba(17, 100, 176, 0.78)),
+			url("https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=2000&q=82")
+				center / cover;
+		color: var(--white);
+	}
+
+	.faq-hero-inner {
+		max-width: 920px;
+	}
+
+	.eyebrow,
+	.section-kicker {
+		color: var(--orange);
+		font-size: 0.78rem;
+		font-weight: 900;
+		text-transform: uppercase;
+	}
+
+	.eyebrow {
+		display: inline-flex;
+		margin: 0 0 18px;
+		padding: 8px 12px;
+		border-left: 4px solid var(--orange);
+		background: rgba(255, 255, 255, 0.12);
+		color: #ffe4ca;
+	}
+
+	h1 {
+		max-width: 900px;
+		margin: 0;
+		font-size: clamp(2.6rem, 6vw, 5.2rem);
+		line-height: 0.98;
+		letter-spacing: 0;
+	}
+
+	.faq-hero p:last-child {
+		max-width: 680px;
+		margin: 24px 0 0;
+		color: rgba(255, 255, 255, 0.86);
+		font-size: 1.12rem;
+		line-height: 1.65;
+	}
+
+	.faq-section {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) minmax(290px, 360px);
+		gap: clamp(24px, 5vw, 58px);
+		align-items: start;
+		padding: clamp(54px, 7vw, 92px) clamp(18px, 6vw, 86px);
+	}
+
+	.faq-list {
+		display: grid;
+		gap: 14px;
+	}
+
+	details {
+		border: 1px solid #cfe2f5;
+		border-radius: 8px;
+		background: var(--white);
+		box-shadow: 0 16px 44px rgba(8, 61, 114, 0.08);
+	}
+
+	summary {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 18px;
+		padding: 22px 24px;
+		color: var(--blue-dark);
+		cursor: pointer;
+		font-size: 1.12rem;
+		font-weight: 900;
+		list-style: none;
+	}
+
+	summary::-webkit-details-marker {
+		display: none;
+	}
+
+	summary::after {
+		display: grid;
+		flex: 0 0 34px;
+		width: 34px;
+		height: 34px;
+		place-items: center;
+		border-radius: 50%;
+		background: var(--blue-soft);
+		color: var(--blue);
+		content: "+";
+		font-size: 1.35rem;
+		line-height: 1;
+	}
+
+	details[open] summary::after {
+		background: var(--orange);
+		color: var(--white);
+		content: "-";
+	}
+
+	details p {
+		margin: 0;
+		padding: 0 24px 24px;
+		color: var(--muted);
+		line-height: 1.75;
+	}
+
+	.faq-card {
+		position: sticky;
+		top: 22px;
+		display: grid;
+		gap: 16px;
+		padding: 28px;
+		border-radius: 8px;
+		background: var(--blue-dark);
+		color: var(--white);
+	}
+
+	.faq-card h2,
+	.faq-card p {
+		margin: 0;
+	}
+
+	.faq-card h2 {
+		font-size: clamp(1.65rem, 3vw, 2.3rem);
+		line-height: 1.05;
+	}
+
+	.faq-card p:not(.section-kicker) {
+		color: rgba(255, 255, 255, 0.82);
+		line-height: 1.6;
+	}
+
+	.button {
+		display: inline-flex;
+		min-height: 52px;
+		align-items: center;
+		justify-content: center;
+		border-radius: 6px;
+		padding: 14px 20px;
+		font-weight: 900;
+	}
+
+	.button.primary {
+		background: var(--orange);
+		color: #221104;
+	}
+
+	@media (max-width: 920px) {
+		.nav {
+			align-items: flex-start;
+		}
+
+		.nav-links {
+			flex-wrap: wrap;
+			justify-content: flex-end;
+		}
+
+		.faq-section {
+			grid-template-columns: 1fr;
+		}
+
+		.faq-card {
+			position: static;
+		}
+	}
+
+	@media (max-width: 680px) {
+		.top-bar {
+			display: grid;
+			gap: 5px;
+			padding-block: 8px;
+		}
+
+		.nav {
+			margin-top: 10px;
+		}
+
+		.nav-links a:not(.nav-call) {
+			display: none;
+		}
+
+		.faq-hero {
+			padding: 166px 16px 50px;
+		}
+
+		summary {
+			padding: 19px 18px;
+		}
+
+		details p {
+			padding: 0 18px 20px;
+		}
+	}
+</style>
