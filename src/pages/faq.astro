@@ -13,12 +13,16 @@
 			name="description"
 			content="Frequently asked questions about selling your house to Amigos House Buyer."
 		/>
+		<link rel="canonical" href="/faq/" />
+		<link rel="alternate" hreflang="en" href="/faq/" />
+		<link rel="alternate" hreflang="es" href="/es/faq/" />
+		<link rel="alternate" hreflang="x-default" href="/faq/" />
 		<title>FAQ | Amigos House Buyer</title>
 	</head>
 	<body>
 		<header class="site-header" aria-label="Site header">
 			<div class="top-bar">
-				<p>Preocupado por proteger su credito? Llamenos, nosotros podemos ayudarle.</p>
+				<p>Worried about protecting your credit? Call us, we can help.</p>
 				<a href="tel:18636603118" aria-label="Call Amigos House Buyer at 863 660 3118">
 					863 660 3118
 				</a>
@@ -32,6 +36,10 @@
 					<a href="/#process">Sell Your House</a>
 					<a href="/reviews/">Reviews</a>
 					<a href="/faq/" aria-current="page">FAQ</a>
+					<div class="language-switch" aria-label="Language options">
+						<a href="/faq/" aria-current="page">EN</a>
+						<a href="/es/faq/">ES</a>
+					</div>
 					<a href="tel:18636603118" class="nav-call">Call Now</a>
 				</div>
 			</nav>
@@ -204,6 +212,46 @@
 		border-radius: 6px;
 		background: var(--orange);
 		color: var(--white);
+	}
+
+	.language-switch {
+		display: inline-flex;
+		align-items: center;
+		overflow: hidden;
+		gap: 3px;
+		padding: 3px;
+		border: 1px solid rgba(17, 100, 176, 0.2);
+		border-radius: 999px;
+		background: #eef6ff;
+		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75);
+	}
+
+	.language-switch a {
+		display: inline-flex;
+		min-width: 34px;
+		min-height: 30px;
+		align-items: center;
+		justify-content: center;
+		border-radius: 999px;
+		padding: 7px 10px;
+		font-size: 0.76rem;
+		font-weight: 900;
+		line-height: 1;
+	}
+
+	.language-switch [aria-current="page"] {
+		background: var(--blue-dark);
+		color: var(--white);
+		box-shadow: 0 5px 14px rgba(8, 61, 114, 0.2);
+	}
+
+	.language-switch a:not([aria-current="page"]) {
+		color: var(--blue-dark);
+	}
+
+	.language-switch a:not([aria-current="page"]):hover {
+		background: rgba(253, 139, 23, 0.16);
+		color: #9d4a00;
 	}
 
 	.faq-hero {

@@ -1,8 +1,8 @@
 ---
-
+import "../../styles/site.css";
 ---
 
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -11,174 +11,158 @@
 		<meta name="generator" content={Astro.generator} />
 		<meta
 			name="description"
-			content="Amigos House Buyer helps homeowners sell houses fast in Lakeland, Winter Haven, Davenport, Plant City, and Polk County."
+			content="Amigos House Buyer ayuda a propietarios a vender casas rapido en Lakeland, Winter Haven, Davenport, Plant City y el condado de Polk."
 		/>
-		<link rel="canonical" href="/" />
+		<link rel="canonical" href="/es/" />
 		<link rel="alternate" hreflang="en" href="/" />
 		<link rel="alternate" hreflang="es" href="/es/" />
 		<link rel="alternate" hreflang="x-default" href="/" />
-		<title>Amigos House Buyer | Sell Your House Fast in Polk County</title>
+		<title>Amigos House Buyer | Venda Su Casa Rapido en el Condado de Polk</title>
 	</head>
 	<body>
-		<header class="site-header" aria-label="Site header">
+		<header class="site-header" aria-label="Encabezado del sitio">
 			<div class="top-bar">
-				<p>Worried about protecting your credit? Call us, we can help.</p>
-				<a href="tel:18636603118" aria-label="Call Amigos House Buyer at 863 660 3118">
+				<p>Preocupado por proteger su credito? Llamenos, nosotros podemos ayudarle.</p>
+				<a href="tel:18636603118" aria-label="Llamar a Amigos House Buyer al 863 660 3118">
 					863 660 3118
 				</a>
 			</div>
 
-			<nav class="nav" aria-label="Primary navigation">
-				<a class="brand" href="/" aria-label="Amigos House Buyer home">
-					<img class="brand-logo" src="/logo.png" alt="Amigos House Buyer logo" />
+			<nav class="nav" aria-label="Navegacion principal">
+				<a class="brand" href="/es/" aria-label="Inicio de Amigos House Buyer">
+					<img class="brand-logo" src="/logo.png" alt="Logo de Amigos House Buyer" />
 				</a>
 				<div class="nav-links">
-					<a href="#process">Sell Your House</a>
-					<a href="/reviews/">Reviews</a>
-					<a href="/faq/">FAQ</a>
-					<div class="language-switch" aria-label="Language options">
-						<a href="/" aria-current="page">EN</a>
-						<a href="/es/">ES</a>
+					<a href="/es/#process">Venda Su Casa</a>
+					<a href="/es/reviews/">Resenas</a>
+					<a href="/es/faq/">Preguntas</a>
+					<div class="language-switch" aria-label="Opciones de idioma">
+						<a href="/">EN</a>
+						<a href="/es/" aria-current="page">ES</a>
 					</div>
-					<a href="tel:18636603118" class="nav-call">Call Now</a>
+					<a href="tel:18636603118" class="nav-call">Llamar</a>
 				</div>
 			</nav>
 		</header>
 
 		<main>
-			<section class="hero" aria-label="Sell your house fast in Polk County">
+			<section class="hero" aria-label="Venda su casa rapido en el condado de Polk">
 				<div class="hero-content">
-					<p class="eyebrow">Central and South Florida cash home buyer</p>
-					<h1>Sell your house fast in Florida without repairs, fees, or stress.</h1>
+					<p class="eyebrow">Compradores de casas en efectivo en Florida</p>
+					<h1>Venda su casa rapido en Florida sin reparaciones, cargos ni estres.</h1>
 					<p class="hero-copy">
-						Amigos House Buyer makes fair cash offers and flexible terms plans for homeowners in
-						Lakeland, Winter Haven, Davenport, Plant City, and nearby communities.
+						Amigos House Buyer hace ofertas justas en efectivo y planes flexibles para propietarios
+						en Lakeland, Winter Haven, Davenport, Plant City y comunidades cercanas.
 					</p>
-					<div class="hero-actions" aria-label="Primary actions">
-						<a class="button primary" href="#offer-form">Get My Fair Offer</a>
-						<a class="button secondary" href="tel:18636603118">Call 863 660 3118</a>
+					<div class="hero-actions" aria-label="Acciones principales">
+						<a class="button primary" href="#offer-form">Quiero Mi Oferta</a>
+						<a class="button secondary" href="tel:18636603118">Llamar 863 660 3118</a>
 					</div>
-					<ul class="trust-list" aria-label="Selling benefits">
-						<li>Offer within 48 hours</li>
-						<li>No showings or agents</li>
-						<li>You choose the closing day</li>
+					<ul class="trust-list" aria-label="Beneficios de venta">
+						<li>Oferta en 48 horas</li>
+						<li>Sin visitas ni agentes</li>
+						<li>Usted escoge el dia de cierre</li>
 					</ul>
 				</div>
 
-				<form class="offer-form" id="offer-form" aria-label="Request a cash offer">
+				<form class="offer-form" id="offer-form" aria-label="Solicitar una oferta en efectivo">
 					<div class="form-heading">
-						<p>Get An Offer Today</p>
-						<h2>Tell us about the property</h2>
+						<p>Reciba una oferta hoy</p>
+						<h2>Cuentenos sobre la propiedad</h2>
 					</div>
 					<label>
-						<span>Property address</span>
-						<input type="text" name="address" autocomplete="street-address" placeholder="Street address" />
+						<span>Direccion de la propiedad</span>
+						<input type="text" name="address" autocomplete="street-address" placeholder="Direccion" />
 					</label>
 					<div class="field-grid">
 						<label>
-							<span>Name</span>
-							<input type="text" name="name" autocomplete="name" placeholder="Your name" />
+							<span>Nombre</span>
+							<input type="text" name="name" autocomplete="name" placeholder="Su nombre" />
 						</label>
 						<label>
-							<span>Phone</span>
+							<span>Telefono</span>
 							<input type="tel" name="phone" autocomplete="tel" placeholder="(863) 660-3118" />
 						</label>
 					</div>
 					<label>
-						<span>Email</span>
-						<input type="email" name="email" autocomplete="email" placeholder="you@example.com" />
+						<span>Correo electronico</span>
+						<input type="email" name="email" autocomplete="email" placeholder="usted@example.com" />
 					</label>
-					<button type="submit">Send My Property</button>
-					<p class="form-note">No obligation. No commissions. No closing costs.</p>
+					<button type="submit">Enviar Mi Propiedad</button>
+					<p class="form-note">Sin obligacion. Sin comisiones. Sin costos de cierre.</p>
 				</form>
 			</section>
 
-			<section class="next-band" aria-label="Process preview">
-				<div>
-					<strong>Step 1</strong>
-					<span>Share the address</span>
-				</div>
-				<div>
-					<strong>Step 2</strong>
-					<span>Review a fair offer</span>
-				</div>
-				<div>
-					<strong>Step 3</strong>
-					<span>Close when you choose</span>
-				</div>
-			</section>
-
-			<section class="intro-section" id="process">
-				<div class="section-kicker">The hassle-free way</div>
+			<section class="section" id="process">
 				<div class="section-grid">
-					<h2>We buy houses quickly, as-is, and on your timeline.</h2>
+					<h2>Compramos casas rapido, tal como estan, y en su calendario.</h2>
 					<div class="section-copy">
 						<p>
-							Skip the repairs, open houses, agent commissions, and months of uncertainty. Amigos
-							House Buyer helps homeowners move forward with a fair cash offer or a terms plan that
-							fits the situation.
+							Evite reparaciones, visitas, comisiones de agentes y meses de incertidumbre. Amigos
+							House Buyer ayuda a los propietarios a avanzar con una oferta justa en efectivo o un
+							plan que se adapte a su situacion.
 						</p>
 						<p>
-							Whether you are behind on payments, relocating, dealing with tenants, or handling an
-							inherited property, our process is private, direct, and built around speed.
+							Si esta atrasado en pagos, se esta mudando, tiene inquilinos o heredo una propiedad,
+							nuestro proceso es privado, directo y pensado para avanzar rapido.
 						</p>
 					</div>
 				</div>
 			</section>
 
-			<section class="process-section" aria-label="How it works">
+			<section class="process-section" aria-label="Como funciona">
 				<article>
 					<span>01</span>
-					<h3>Tell us about the house</h3>
-					<p>No fluff, no fuss. Share the address and a few details so we can understand the property.</p>
+					<h3>Cuentenos sobre la casa</h3>
+					<p>Comparta la direccion y algunos detalles para entender la propiedad.</p>
 				</article>
 				<article>
 					<span>02</span>
-					<h3>Review your offer</h3>
-					<p>We evaluate the house and make a fair, no-obligation offer, usually within 48 hours.</p>
+					<h3>Revise su oferta</h3>
+					<p>Evaluamos la casa y hacemos una oferta justa, sin obligacion, usualmente en 48 horas.</p>
 				</article>
 				<article>
 					<span>03</span>
-					<h3>Pick your closing day</h3>
-					<p>Choose the date that works for you, grab your check, and leave the repairs to us.</p>
-				</article>
+					<h3>Escoja el dia de cierre</h3>
+					<p>Elija la fecha que le convenga y deje las reparaciones en nuestras manos.</p>
+			</article>
 			</section>
 
 			<section class="situations-section">
 				<div class="section-heading">
-					<div class="section-kicker">No more house headaches</div>
-					<h2>We help with the situations traditional buyers avoid.</h2>
+					<div class="section-kicker">No mas dolores de cabeza con su casa</div>
+					<h2>Ayudamos con situaciones que los compradores tradicionales suelen evitar.</h2>
 				</div>
 				<div class="situation-grid">
 					<article>
 						<span aria-hidden="true">OK</span>
-						<h3>Late bank payments</h3>
-						<p>Let's see if one of our programs can help protect your next move.</p>
+						<h3>Pagos atrasados al banco</h3>
+						<p>Veamos si uno de nuestros programas puede ayudarle a proteger su proximo paso.</p>
 					</article>
 					<article>
 						<span aria-hidden="true">OK</span>
-						<h3>Moving out of state</h3>
-						<p>Relocating soon? We can discuss cash or payment takeover options.</p>
+						<h3>Mudanza fuera del estado</h3>
+						<p>Se muda pronto? Podemos hablar sobre opciones en efectivo o planes de pago.</p>
 					</article>
 					<article>
 						<span aria-hidden="true">OK</span>
-						<h3>Tired of tenants</h3>
-						<p>Skip the stress of problem tenants, cleanup, repairs, and missed rent.</p>
+						<h3>Cansado de inquilinos</h3>
+						<p>Evite el estres de inquilinos dificiles, limpieza, reparaciones y rentas atrasadas.</p>
 					</article>
 					<article>
 						<span aria-hidden="true">OK</span>
-						<h3>Too many repairs</h3>
-						<p>Sell as-is and let our team handle the work after closing.</p>
+						<h3>Demasiadas reparaciones</h3>
+						<p>Venda la casa tal como esta y deje que nuestro equipo se encargue del trabajo despues del cierre.</p>
 					</article>
 					<article>
 						<span aria-hidden="true">OK</span>
-						<h3>Inherited property</h3>
-						<p>We can help you explore a direct sale when the property has become a burden.</p>
+						<h3>Propiedad heredada</h3>
+						<p>Podemos ayudarle a explorar una venta directa si la propiedad se ha vuelto una carga.</p>
 					</article>
 					<article>
 						<span aria-hidden="true">OK</span>
-						<h3>Going through divorce</h3>
-						<p>Move on within your timeframe with a private and straightforward sale.</p>
+						<h3>Proceso de divorcio</h3>
+						<p>Avance en su propio tiempo con una venta privada y sencilla.</p>
 					</article>
 				</div>
 			</section>
@@ -186,24 +170,24 @@
 			<section class="offer-section">
 				<div class="offer-panel">
 					<div>
-						<div class="section-kicker">Cash offer or terms program</div>
-						<h2>Sell your house to us and avoid the listing hassle.</h2>
+						<div class="section-kicker">Oferta en efectivo o programa con terminos</div>
+						<h2>Venda su casa directamente a nosotros y evite el proceso de listar.</h2>
 					</div>
 					<ul>
 						<li>
-							<strong>Zero fees, commissions, or closing costs.</strong>
-							The sale price is the amount you can plan around.
+							<strong>Sin cargos, comisiones ni costos de cierre.</strong>
+							El precio de venta es la cantidad con la que puede planificar.
 						</li>
 						<li>
-							<strong>No showings or weekend interruptions.</strong>
-							We buy directly, so you do not have to keep the house ready for strangers.
+							<strong>Sin visitas ni interrupciones de fin de semana.</strong>
+							Compramos directamente, asi que no tiene que preparar la casa para desconocidos.
 						</li>
 						<li>
-							<strong>Repairs and cleanout handled.</strong>
-							Leave unwanted items behind and let us take care of the rest.
+							<strong>Nos encargamos de reparaciones y limpieza.</strong>
+							Deje los articulos que no quiera y permita que nosotros nos encarguemos del resto.
 						</li>
 					</ul>
-					<a class="button primary" href="#offer-form">Yes, I Want My Fair Offer</a>
+					<a class="button primary" href="#offer-form">Si, Quiero Mi Oferta Justa</a>
 				</div>
 			</section>
 		</main>

@@ -1,0 +1,104 @@
+---
+import "../../styles/site.css";
+---
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="generator" content={Astro.generator} />
+		<meta
+			name="description"
+			content="Comparta su resena y experiencia trabajando con Amigos House Buyer."
+		/>
+		<link rel="canonical" href="/es/reviews/" />
+		<link rel="alternate" hreflang="en" href="/reviews/" />
+		<link rel="alternate" hreflang="es" href="/es/reviews/" />
+		<link rel="alternate" hreflang="x-default" href="/reviews/" />
+		<title>Resenas | Amigos House Buyer</title>
+	</head>
+	<body>
+		<header class="site-header" aria-label="Encabezado del sitio">
+			<div class="top-bar">
+				<p>Preocupado por proteger su credito? Llamenos, nosotros podemos ayudarle.</p>
+				<a href="tel:18636603118" aria-label="Llamar a Amigos House Buyer al 863 660 3118">
+					863 660 3118
+				</a>
+			</div>
+
+			<nav class="nav" aria-label="Navegacion principal">
+				<a class="brand" href="/es/" aria-label="Inicio de Amigos House Buyer">
+					<img class="brand-logo" src="/logo.png" alt="Logo de Amigos House Buyer" />
+				</a>
+				<div class="nav-links">
+					<a href="/es/#process">Venda Su Casa</a>
+					<a href="/es/reviews/" aria-current="page">Resenas</a>
+					<a href="/es/faq/">FAQ</a>
+					<div class="language-switch" aria-label="Opciones de idioma">
+						<a href="/reviews/">EN</a>
+						<a href="/es/reviews/" aria-current="page">ES</a>
+					</div>
+					<a href="tel:18636603118" class="nav-call">Llamar</a>
+				</div>
+			</nav>
+		</header>
+
+		<main>
+			<section class="page-hero">
+				<div class="page-hero-inner">
+					<p class="eyebrow">Resenas de clientes</p>
+					<h1>Comparta su experiencia con Amigos House Buyer.</h1>
+					<p>
+						Quiere compartir su experiencia con nosotros? Envienos una nota para contarnos como
+						fue trabajar con Amigos House Buyer LLC.
+					</p>
+				</div>
+			</section>
+
+			<section class="review-section" aria-label="Enviar una resena">
+				<div class="review-copy">
+					<p class="section-kicker">Deje una resena</p>
+					<h2>Nos encantaria saber de usted.</h2>
+				</div>
+
+				<form class="review-form" aria-label="Formulario para enviar resena">
+					<div class="field-grid">
+						<label>
+							<span>Nombre</span>
+							<input type="text" name="name" autocomplete="name" placeholder="Su nombre" />
+						</label>
+						<label>
+							<span>Email</span>
+							<input type="email" name="email" autocomplete="email" placeholder="usted@example.com" />
+						</label>
+					</div>
+
+					<label>
+						<span>Calificacion</span>
+						<select name="rating">
+							<option value="">Seleccione una calificacion</option>
+							<option value="5">5 estrellas</option>
+							<option value="4">4 estrellas</option>
+							<option value="3">3 estrellas</option>
+							<option value="2">2 estrellas</option>
+							<option value="1">1 estrella</option>
+						</select>
+					</label>
+
+					<label>
+						<span>Su resena</span>
+						<textarea
+							name="review"
+							rows="7"
+							placeholder="Cuentenos como fue trabajar con Amigos House Buyer."></textarea>
+					</label>
+
+					<button type="submit">Enviar Resena</button>
+					<p class="form-note">Gracias por tomar el tiempo de compartir su experiencia.</p>
+				</form>
+			</section>
+		</main>
+	</body>
+</html>
