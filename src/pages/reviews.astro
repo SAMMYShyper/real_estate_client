@@ -29,17 +29,19 @@
 			</div>
 
 			<nav class="nav" aria-label="Primary navigation">
-				<a class="brand" href="/" aria-label="Amigos House Buyer home">
-					<img class="brand-logo" src="/logo.png" alt="Amigos House Buyer logo" />
-				</a>
-				<div class="nav-links">
-					<a href="/#process">Sell Your House</a>
-					<a href="/reviews/" aria-current="page">Reviews</a>
-					<a href="/faq/">FAQ</a>
+				<div class="brand-group">
+					<a class="brand" href="/" aria-label="Amigos House Buyer home">
+						<img class="brand-logo" src="/logo.png" alt="Amigos House Buyer logo" />
+					</a>
 					<div class="language-switch" aria-label="Language options">
 						<a href="/reviews/" aria-current="page">EN</a>
-						<a href="/es/reviews/">ES</a>
+						<a href="/es/reviews/">Para Espanol, presione aqui.</a>
 					</div>
+				</div>
+				<div class="nav-links">
+					<a href="/">Sell Your House</a>
+					<a href="/reviews/" aria-current="page">Our Story</a>
+					<a href="/faq/">FAQ</a>
 					<a href="tel:18636603118" class="nav-call">Call Now</a>
 				</div>
 			</nav>
@@ -180,6 +182,13 @@
 		display: inline-flex;
 		align-items: center;
 		min-width: 150px;
+	}
+
+	.brand-group {
+		display: flex;
+		align-items: center;
+		gap: 14px;
+		flex-wrap: wrap;
 	}
 
 	.brand-logo {
@@ -427,6 +436,11 @@
 			margin-top: 10px;
 			flex-wrap: wrap;
 			gap: 12px;
+		}
+
+		.brand-group {
+			width: 100%;
+			justify-content: space-between;
 		}
 
 		.nav-links {

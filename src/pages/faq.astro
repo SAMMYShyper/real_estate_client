@@ -29,17 +29,19 @@
 			</div>
 
 			<nav class="nav" aria-label="Primary navigation">
-				<a class="brand" href="/" aria-label="Amigos House Buyer home">
-					<img class="brand-logo" src="/logo.png" alt="Amigos House Buyer logo" />
-				</a>
-				<div class="nav-links">
-					<a href="/#process">Sell Your House</a>
-					<a href="/reviews/">Reviews</a>
-					<a href="/faq/" aria-current="page">FAQ</a>
+				<div class="brand-group">
+					<a class="brand" href="/" aria-label="Amigos House Buyer home">
+						<img class="brand-logo" src="/logo.png" alt="Amigos House Buyer logo" />
+					</a>
 					<div class="language-switch" aria-label="Language options">
 						<a href="/faq/" aria-current="page">EN</a>
-						<a href="/es/faq/">ES</a>
+						<a href="/es/faq/">Para Espanol, presione aqui.</a>
 					</div>
+				</div>
+				<div class="nav-links">
+					<a href="/">Sell Your House</a>
+					<a href="/reviews/">Reviews</a>
+					<a href="/faq/" aria-current="page">FAQ</a>
 					<a href="tel:18636603118" class="nav-call">Call Now</a>
 				</div>
 			</nav>
@@ -67,7 +69,7 @@
 					<details>
 						<summary>Q:  How are you different from a real estate agent?</summary>
 						<p>
-							We don't charge any fees. When we agree on price and terms we don't have to qualify to a Financial Institution.
+							No showings, no fees. We buy Houses Cash. When we agree on price and terms we don't have to qualify to a financial institution.
 						</p>
 					</details>
 
@@ -75,21 +77,21 @@
 						<summary>Q: How much you pay for my house?</summary>
 						<p>
 							The price we are willing to pay for a house depends on the condition of the house and the values of the comparable houses in the vicinity. Our no-obligation pricing commitment means that you don’t have to move forward with the offer we give you.
-							<br><br>Typically we offer two options: One cash option and the other option using financing.</br>
+							<br><br>Typically we offer two options: One cash option and the other option using financing, you're always in control.</br>
 						</p>
 					</details>
 
 					<details>
 						<summary>Q:  Are there any fees or commissions when working with AMIGOS HOUSE BUYER?</summary>
 						<p>
-							No fees or commissions when you sell directly to us, unlike listing fees that can take up to 6% from your pocket. We’ll make you an offer, and if it fits, we’ll buy your house commission-free. We often cover closing costs too! Once we buy, the burden is ours, and you walk away free from property responsibilities.
+							We buy houses commission-free and often cover 100% of the closing costs. Once we buy, we take on the burden of the property so you don't have to. It’s that simple.
 						</p>
 					</details>
 
 					<details>
 						<summary>Q:  Is there any obligation when I submit my information?</summary>
 						<p>
-							There is absolutely zero obligation for you, we’ll run our numbers and let you know your options. From there, it’s 100% your decision on whether or not you’d like to sell your house to us. We’ll let you decide what’s right for you.
+							It's 100% your call on whether or not you'd like to sell your house to us.
 						</p>
 					</details>
 				</div>
@@ -183,6 +185,13 @@
 		display: inline-flex;
 		align-items: center;
 		min-width: 150px;
+	}
+
+	.brand-group {
+		display: flex;
+		align-items: center;
+		gap: 14px;
+		flex-wrap: wrap;
 	}
 
 	.brand-logo {
@@ -435,6 +444,11 @@
 			margin-top: 10px;
 			flex-wrap: wrap;
 			gap: 12px;
+		}
+
+		.brand-group {
+			width: 100%;
+			justify-content: space-between;
 		}
 
 		.nav-links {

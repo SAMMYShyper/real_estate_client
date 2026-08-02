@@ -29,17 +29,19 @@ import "../../styles/site.css";
 			</div>
 
 			<nav class="nav" aria-label="Navegacion principal">
-				<a class="brand" href="/es/" aria-label="Inicio de Amigos House Buyer">
-					<img class="brand-logo" src="/logo.png" alt="Logo de Amigos House Buyer" />
-				</a>
-				<div class="nav-links">
-					<a href="/es/#process">Venda Su Casa</a>
-					<a href="/es/reviews/">Resenas</a>
-					<a href="/es/faq/">Preguntas</a>
-					<div class="language-switch" aria-label="Opciones de idioma">
-						<a href="/">EN</a>
-						<a href="/es/" aria-current="page">ES</a>
+					<div class="brand-group">
+						<a class="brand" href="/es/" aria-label="Inicio de Amigos House Buyer">
+							<img class="brand-logo" src="/logo.png" alt="Logo de Amigos House Buyer" />
+						</a>
+						<div class="language-switch" aria-label="Opciones de idioma">
+							<a href="/">For English, click here.</a>
+							<a href="/es/" aria-current="page">ES</a>
+						</div>
 					</div>
+				<div class="nav-links">
+					<a href="/es/">Venda Su Casa</a>
+					<a href="/es/reviews/">Nuestra Historia</a>
+					<a href="/es/faq/">Preguntas</a>
 					<a href="tel:18636603118" class="nav-call">Llamar</a>
 				</div>
 			</nav>
@@ -65,31 +67,36 @@ import "../../styles/site.css";
 					</ul>
 				</div>
 
-				<form class="offer-form" id="offer-form" aria-label="Solicitar una oferta en efectivo">
+				<form class="offer-form" id="offer-form" aria-label="Solicitar una oferta en efectivo" novalidate>
 					<div class="form-heading">
 						<p>Reciba una oferta hoy</p>
 						<h2>Cuentenos sobre la propiedad</h2>
 					</div>
 					<label>
 						<span>Direccion de la propiedad</span>
-						<input type="text" name="address" autocomplete="street-address" placeholder="Direccion" />
+						<input type="text" name="address" autocomplete="street-address" placeholder="Direccion" required />
 					</label>
 					<div class="field-grid">
 						<label>
 							<span>Nombre</span>
-							<input type="text" name="name" autocomplete="name" placeholder="Su nombre" />
+							<input type="text" name="name" autocomplete="name" placeholder="Su nombre" required />
 						</label>
 						<label>
 							<span>Telefono</span>
-							<input type="tel" name="phone" autocomplete="tel" placeholder="(863) 660-3118" />
+							<input type="tel" name="phone" autocomplete="tel" placeholder="(863) 660-3118" required />
 						</label>
 					</div>
 					<label>
 						<span>Correo electronico</span>
-						<input type="email" name="email" autocomplete="email" placeholder="usted@example.com" />
+						<input type="email" name="email" autocomplete="email" placeholder="usted@example.com" required />
 					</label>
+					<label class="visually-hidden" aria-hidden="true">
+						<span>Sitio web</span>
+						<input type="text" name="website" tabindex="-1" autocomplete="off" />
+					</label>
+					<input type="hidden" name="language" value="es" />
 					<button type="submit">Enviar Mi Propiedad</button>
-					<p class="form-note">Sin obligacion. Sin comisiones. Sin costos de cierre.</p>
+					<p class="form-note" data-form-status aria-live="polite">Sin obligacion. Sin comisiones. Sin costos de cierre.</p>
 				</form>
 			</section>
 
@@ -135,32 +142,26 @@ import "../../styles/site.css";
 				</div>
 				<div class="situation-grid">
 					<article>
-						<span aria-hidden="true">OK</span>
 						<h3>Pagos atrasados al banco</h3>
 						<p>Veamos si uno de nuestros programas puede ayudarle a proteger su proximo paso.</p>
 					</article>
 					<article>
-						<span aria-hidden="true">OK</span>
 						<h3>Mudanza fuera del estado</h3>
 						<p>Se muda pronto? Podemos hablar sobre opciones en efectivo o planes de pago.</p>
 					</article>
 					<article>
-						<span aria-hidden="true">OK</span>
 						<h3>Cansado de inquilinos</h3>
 						<p>Evite el estres de inquilinos dificiles, limpieza, reparaciones y rentas atrasadas.</p>
 					</article>
 					<article>
-						<span aria-hidden="true">OK</span>
 						<h3>Demasiadas reparaciones</h3>
 						<p>Venda la casa tal como esta y deje que nuestro equipo se encargue del trabajo despues del cierre.</p>
 					</article>
 					<article>
-						<span aria-hidden="true">OK</span>
 						<h3>Propiedad heredada</h3>
 						<p>Podemos ayudarle a explorar una venta directa si la propiedad se ha vuelto una carga.</p>
 					</article>
 					<article>
-						<span aria-hidden="true">OK</span>
 						<h3>Proceso de divorcio</h3>
 						<p>Avance en su propio tiempo con una venta privada y sencilla.</p>
 					</article>
@@ -270,6 +271,13 @@ import "../../styles/site.css";
 		display: inline-flex;
 		align-items: center;
 		min-width: 150px;
+	}
+
+	.brand-group {
+		display: flex;
+		align-items: center;
+		gap: 14px;
+		flex-wrap: wrap;
 	}
 
 	.brand-logo {
@@ -462,6 +470,23 @@ import "../../styles/site.css";
 		margin: 0;
 	}
 
+	.visually-hidden {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
+	}
+
+	button:disabled {
+		cursor: wait;
+		opacity: 0.7;
+	}
+
 	.form-heading p {
 		color: var(--orange);
 		font-size: 0.78rem;
@@ -597,7 +622,8 @@ import "../../styles/site.css";
 		grid-template-columns: repeat(3, 1fr);
 		gap: 1px;
 		padding-top: 0;
-		background: linear-gradient(90deg, transparent 0, transparent clamp(18px, 6vw, 86px), #dfe6df clamp(18px, 6vw, 86px), #dfe6df calc(100% - clamp(18px, 6vw, 86px)), transparent calc(100% - clamp(18px, 6vw, 86px)));
+		padding-bottom: clamp(36px, 0vw, 0px);
+		background: linear-gradient(90deg, transparent 0, transparent clamp(18px, 6vw, 86px), #fff8ef clamp(18px, 6vw, 86px), #fff8ef calc(100% - clamp(18px, 6vw, 86px)), transparent calc(100% - clamp(18px, 6vw, 86px)));
 	}
 
 	.process-section article {
@@ -655,17 +681,6 @@ import "../../styles/site.css";
 		border: 1px solid #cfe2f5;
 		border-radius: 8px;
 		background: rgba(255, 255, 255, 0.78);
-	}
-
-	.situation-grid span {
-		display: grid;
-		width: 42px;
-		height: 42px;
-		place-items: center;
-		border-radius: 50%;
-		background: var(--blue);
-		color: var(--white);
-		font-weight: 900;
 	}
 
 	.offer-section {
@@ -755,6 +770,11 @@ import "../../styles/site.css";
 			margin-top: 10px;
 			flex-wrap: wrap;
 			gap: 12px;
+		}
+
+		.brand-group {
+			width: 100%;
+			justify-content: space-between;
 		}
 
 		.nav-links {
