@@ -41,7 +41,7 @@ import "../../styles/site.css";
 				<div class="nav-links">
 					<a href="/es/">Venda Su Casa</a>
 					<a href="/es/reviews/">Nuestra Historia</a>
-					<a href="/es/faq/">Preguntas</a>
+					<a href="/es/faq/">FAQ</a>
 					<a href="tel:18636603118" class="nav-call">Llamar</a>
 				</div>
 			</nav>
@@ -99,6 +99,7 @@ import "../../styles/site.css";
 					<p class="form-note" data-form-status aria-live="polite">Sin obligacion. Sin comisiones. Sin costos de cierre.</p>
 				</form>
 			</section>
+			
 
 			<section class="section" id="process">
 				<div class="section-grid">
@@ -133,6 +134,14 @@ import "../../styles/site.css";
 					<h3>Escoja el dia de cierre</h3>
 					<p>Elija la fecha que le convenga y deje las reparaciones en nuestras manos.</p>
 			</article>
+			</section>
+
+			<section class="mission-section">
+				<p class="mission-copy mission-copy--en">
+					Nos dedicamos a remodelar y vender casas, pero también ayudamos a
+					nuestros vecinos a sobrellevar retos financieros temporales comprando sus
+					propiedades de manera directa.
+				</p>
 			</section>
 
 			<section class="situations-section">
@@ -196,6 +205,23 @@ import "../../styles/site.css";
 </html>
 
 <style>
+
+.mission-section {
+	max-width: 760px;
+	margin: 0 auto;
+	padding: clamp(28px, 5vw, 48px) clamp(18px, 6vw, 86px);
+	text-align: center;
+	display: grid;
+	gap: 14px;
+}
+
+.mission-copy {
+	margin: 0;
+	color: var(--muted);
+	font-size: 1.08rem;
+	line-height: 1.72;
+}
+
 	:root {
 		color-scheme: light;
 		font-family:
