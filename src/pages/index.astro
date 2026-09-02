@@ -1,5 +1,5 @@
 ---
-
+const localHeroImage = '/house_interior.jpeg';
 ---
 
 <html lang="en">
@@ -40,7 +40,7 @@
 					</div>
 				<div class="nav-links">
 					<a href="/">Sell Your House</a>
-					<a href="/reviews/">Our Story</a>
+					<a href="/reviews/">Reviews</a>
 					<a href="/faq/">FAQ</a>
 					<a href="tel:18636603118" class="nav-call">Call Now</a>
 				</div>
@@ -48,7 +48,11 @@
 		</header>
 
 		<main>
-			<section class="hero" aria-label="Sell your house fast in Polk County">
+			<section
+				class="hero"
+				aria-label="Sell your house fast in Polk County"
+				style={`--hero-image: url("${localHeroImage}")`}
+			>
 				<div class="hero-content">
 					<h1>Sell your house fast in Florida without repairs, fees, or stress.</h1>
 					<p class="hero-copy">
@@ -407,7 +411,7 @@
 		padding: 185px clamp(18px, 6vw, 86px) 72px;
 		background:
 			linear-gradient(90deg, rgba(8, 61, 114, 0.92) 0%, rgba(8, 61, 114, 0.73) 46%, rgba(8, 61, 114, 0.24) 100%),
-			url("https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=2200&q=82")
+			var(--hero-image)
 				center / cover;
 		color: var(--white);
 		overflow: hidden;
@@ -851,7 +855,7 @@
 			padding: 44px 16px 44px;
 			background:
 				linear-gradient(180deg, rgba(8, 61, 114, 0.94) 0%, rgba(8, 61, 114, 0.76) 60%, rgba(8, 61, 114, 0.38) 100%),
-				url("https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=82")
+					var(--hero-image)
 					center / cover;
 		}
 

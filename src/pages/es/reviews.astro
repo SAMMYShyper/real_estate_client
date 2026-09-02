@@ -1,5 +1,8 @@
 ---
 import "../../styles/site.css";
+
+const aboutParagraph = 'Pegue aqui su parrafo de Sobre Nosotros.';
+const aboutImage = '/house_interior.jpeg';
 ---
 
 <html lang="es">
@@ -40,7 +43,7 @@ import "../../styles/site.css";
 				</div>
 				<div class="nav-links">
 					<a href="/es/">Venda Su Casa</a>
-					<a href="/es/reviews/" aria-current="page">Nuestra Historia</a>
+					<a href="/es/reviews/" aria-current="page">Reseñas</a>
 					<a href="/es/faq/">FAQ</a>
 					<a href="tel:18636603118" class="nav-call">Llamar</a>
 				</div>
@@ -48,6 +51,15 @@ import "../../styles/site.css";
 		</header>
 
 		<main>
+			<section class="about-section" aria-label="Sobre Amigos House Buyer">
+				<div class="about-copy">
+					<p class="section-kicker">Sobre nosotros</p>
+					<h2>Ayudamos a los propietarios a avanzar.</h2>
+					<p>Nos dedicamos a remodelar y vender casas, en el proceso ayudamos a nuestros vecinos a sobrellevar retos financieros temporales comprando sus propiedades de manera directa.</p>
+				</div>
+				<img src={aboutImage} alt="Interior de una casa" />
+			</section>
+
 			<section class="page-hero">
 				<div class="page-hero-inner">
 					<p class="eyebrow">Resenas de clientes</p>
@@ -104,3 +116,64 @@ import "../../styles/site.css";
 		</main>
 	</body>
 </html>
+
+<style>
+	.about-section {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
+		align-items: center;
+		gap: clamp(28px, 6vw, 80px);
+		max-width: 1160px;
+		margin: 0 auto;
+		padding: 185px clamp(18px, 6vw, 86px) clamp(42px, 6vw, 76px);
+	}
+
+	.about-copy {
+		display: grid;
+		gap: 16px;
+	}
+
+	.about-copy h2,
+	.about-copy p {
+		margin: 0;
+	}
+
+	.about-copy h2 {
+		font-size: clamp(2rem, 4.5vw, 4rem);
+		line-height: 1;
+	}
+
+	.about-copy p:last-child {
+		max-width: 620px;
+		color: var(--muted);
+		font-size: 1.06rem;
+		line-height: 1.7;
+	}
+
+	.about-section img {
+		width: 100%;
+		height: 340px;
+		border-radius: 8px;
+		object-fit: cover;
+	}
+
+	.about-section + .page-hero {
+		padding-top: 32px;
+	}
+
+	@media (max-width: 920px) {
+		.about-section {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	@media (max-width: 680px) {
+		.about-section {
+			padding-top: 214px;
+		}
+
+		.about-section + .page-hero {
+			padding-top: 28px;
+		}
+	}
+</style>
