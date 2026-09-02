@@ -100,33 +100,33 @@ import "../../styles/site.css";
 				</form>
 			</section>
 			<script>
-				const form = document.getElementById('offer-form');
-				const status = form.querySelector('[data-form-status]');
+			const form = document.getElementById('offer-form');
+			const status = form.querySelector('[data-form-status]');
 
-				form.addEventListener('submit', async (e) => {
-					e.preventDefault();
-					const formData = new FormData(form);
+			form.addEventListener('submit', async (e) => {
+				e.preventDefault();
+				const formData = new FormData(form);
 
-					status.textContent = 'Sending...';
+				status.textContent = 'Enviando...';
 
-					try {
-					const res = await fetch('/api/submit-offer', {
-						method: 'POST',
-						body: formData,
-					});
-					const data = await res.json();
-
-					if (data.success) {
-						status.textContent = "Thanks! We'll be in touch shortly.";
-						form.reset();
-					} else {
-						status.textContent = 'Something went wrong. Please call us instead.';
-					}
-					} catch {
-					status.textContent = 'Something went wrong. Please call us instead.';
-					}
+				try {
+				const res = await fetch('/api/submit-offer', {
+					method: 'POST',
+					body: formData,
 				});
-			</script>
+				const data = await res.json();
+
+				if (data.success) {
+					status.textContent = '¡Gracias! Nos pondremos en contacto pronto.';
+					form.reset();
+				} else {
+					status.textContent = 'Algo salió mal. Por favor, llámenos.';
+				}
+				} catch {
+				status.textContent = 'Algo salió mal. Por favor, llámenos.';
+				}
+			});
+		</script>
 
 			<section class="section" id="process">
 				<div class="section-grid">
