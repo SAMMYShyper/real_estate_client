@@ -99,7 +99,34 @@ import "../../styles/site.css";
 					<p class="form-note" data-form-status aria-live="polite">Sin obligacion. Sin comisiones. Sin costos de cierre.</p>
 				</form>
 			</section>
-			
+			<script>
+				const form = document.getElementById('offer-form');
+				const status = form.querySelector('[data-form-status]');
+
+				form.addEventListener('submit', async (e) => {
+					e.preventDefault();
+					const formData = new FormData(form);
+
+					status.textContent = 'Sending...';
+
+					try {
+					const res = await fetch('/api/submit-offer', {
+						method: 'POST',
+						body: formData,
+					});
+					const data = await res.json();
+
+					if (data.success) {
+						status.textContent = "Thanks! We'll be in touch shortly.";
+						form.reset();
+					} else {
+						status.textContent = 'Something went wrong. Please call us instead.';
+					}
+					} catch {
+					status.textContent = 'Something went wrong. Please call us instead.';
+					}
+				});
+			</script>
 
 			<section class="section" id="process">
 				<div class="section-grid">
